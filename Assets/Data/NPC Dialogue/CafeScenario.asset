@@ -1,0 +1,196 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d90b47436c6c120429fdc387a5b457df, type: 3}
+  m_Name: CafeScenario
+  m_EditorClassIdentifier: Assembly-CSharp::NPCDialogueData
+  npcName: Waiter
+  nodes:
+  - nodeId: 0
+    spanishLine: Nosotros ______ (tener) tres personas hoy.
+    englishHint: 'Tener (To Have) follows these rules: Yo(I) - Tengo, Tu(You) - Tienes,
+      El/Ella/Usted (He/She/You(formal)) - Tiene, Nosotros (We) - Tenemos, Ellos/Ellas/Ustedes
+      (They/Them/You All) - Tienen. For this sentence what is the subject and use
+      this list to find the correct conjugation. '
+    options:
+    - responseText: Tengo
+      nextNodeId: 0
+      endsConversation: 0
+    - responseText: Tienes
+      nextNodeId: 0
+      endsConversation: 0
+    - responseText: Tiene
+      nextNodeId: 0
+      endsConversation: 0
+    - responseText: Tenemos
+      nextNodeId: 1
+      endsConversation: 0
+    - responseText: Tienen
+      nextNodeId: 0
+      endsConversation: 0
+  - nodeId: 1
+    spanishLine: "\xBFD\xF3nde ________ (ser/estar) la mesa libre cerca de la ventana?"
+    englishHint: 'Before conjugation which is the right verb ser or estar? Ser is
+      for permanent being and Estar is for temporary being. Is location permanent
+      or temporary (Hint: Be careful some things can move).  '
+    options:
+    - responseText: Ser
+      nextNodeId: 1
+      endsConversation: 0
+    - responseText: Estar
+      nextNodeId: 2
+      endsConversation: 0
+  - nodeId: 2
+    spanishLine: "\xBFD\xF3nde ________ (estar) la mesa libre cerca de la ventana?"
+    englishHint: 'Good job on identifying that its estar. Estar follows this pattern:
+      Yo(I) - Estoy, Tu(You) - Estas, El/Ella/Usted (He/She/You(Formal) - Esta, Nosotros
+      (We) - Estamos, Ellos/Ellas/Ustedes (They/Them/You All) - Estan. Here your
+      subject is La Mesa which acccording to Spanish Grammar Rules is a singular
+      she. Hence what is the right conjugation for she? '
+    options:
+    - responseText: Estoy
+      nextNodeId: 2
+      endsConversation: 0
+    - responseText: Estas
+      nextNodeId: 2
+      endsConversation: 0
+    - responseText: Esta
+      nextNodeId: 3
+      endsConversation: 0
+    - responseText: 'Estamos '
+      nextNodeId: 2
+      endsConversation: 0
+    - responseText: Estan
+      nextNodeId: 2
+      endsConversation: 0
+  - nodeId: 3
+    spanishLine: "\xA1Mira! En este momento, yo ________ ________ (estar + leer)
+      el men\xFA del d\xEDa"
+    englishHint: 'This sentence uses present progressive grammar. In English it would
+      translate to I am reading. How would you say I am reading in Spanish? Leer
+      Present Progressive: Yo(I) - Estoy Leyendo, Tu(You) - Estas Leyendo, El/Ella/Usted(He/She/You(Formal))
+      - Esta Leyendo, Nosotros(We) - Estamos Leyendo, Ellos/Ellas/Ustedes(They/Them?You
+      All) - Estan Leyendo. '
+    options:
+    - responseText: Estoy Leyendo
+      nextNodeId: 4
+      endsConversation: 0
+    - responseText: Estas Leyendo
+      nextNodeId: 3
+      endsConversation: 0
+    - responseText: Esta Leyendo
+      nextNodeId: 3
+      endsConversation: 0
+    - responseText: Estamos Leyendo
+      nextNodeId: 3
+      endsConversation: 0
+    - responseText: Estan Leyendo
+      nextNodeId: 3
+      endsConversation: 0
+  - nodeId: 4
+    spanishLine: "Yo ________ (tener) mucha hambre; yo ________ (querer) un s\xE1ndwich
+      de jam\xF3n"
+    englishHint: 'Tener: Yo(I) - Tengo, Tu(You) - Tienes, El/Ella/Usted (He/She/You(Formal))
+      - Tiene, Nosotros(We) - Tenemos, Ellos/Ellas/Ustedes (They/Them/You All) -
+      Tienen. Querer: Yo(I) - Quiero, Tu(You) - Quieres, El/Ella/Usted (He/She/You(Formal))
+      - Quiere, Nosotros(We) - Queremos, Ellos/Ellas/Ustedes(They/Them/You All) -
+      Quieren.  '
+    options:
+    - responseText: Tengo, Quiero
+      nextNodeId: 5
+      endsConversation: 0
+    - responseText: Tienes, Quieres
+      nextNodeId: 4
+      endsConversation: 0
+    - responseText: Tiene, Quiere
+      nextNodeId: 4
+      endsConversation: 0
+    - responseText: Tenemos, Queremos
+      nextNodeId: 4
+      endsConversation: 0
+    - responseText: Tienen, Queremos
+      nextNodeId: 4
+      endsConversation: 0
+  - nodeId: 5
+    spanishLine: "Ella ________ (tener) sed; ella ________ (preferir) un t\xE9 helado."
+    englishHint: 'Tener - Yo(I) - Tengo, Tu(You) - Tienes, El/Ella/Usted(He/She/You(Formal))
+      - Tiene, Nosotros(We) - Tenemos, Ellos/Ellas/Ustedes(They/Them/You All) - Tienen.
+      Preferir - Yo(I) - Prefiero, Tu(You) - Prefieres, El/Ella/Usted(He/She/You(Formal))
+      - Prefiere, Nosotros(We) - Preferimos, Ellos/Ellas/Ustedes(They/Them/You All)
+      - Prefieren.  '
+    options:
+    - responseText: Tengo, Prefiero
+      nextNodeId: 5
+      endsConversation: 0
+    - responseText: Tienes, Prefieres
+      nextNodeId: 5
+      endsConversation: 0
+    - responseText: Tiene, Prefiere
+      nextNodeId: 6
+      endsConversation: 0
+    - responseText: Tenemos, Preferimos
+      nextNodeId: 5
+      endsConversation: 0
+    - responseText: Tienen, Prefieren
+      nextNodeId: 5
+      endsConversation: 0
+  - nodeId: 6
+    spanishLine: "\xBFQui\xE9n ________ (ir + a + pagar) la cuenta?"
+    englishHint: 'This is a future tense. The waiter is asking which individual person
+      (he or she) will pay? Ir a pagar - Yo(I) - voy a pagar, Tu(You) - vas a pagar,
+      El/Ella/Usted(He/She/You(Formal)) - va a pagar, Nosotros(We) - vamos a pagar,
+      Ellos/Ellas/Ustedes(They/Them/You All) - van a pagar. '
+    options:
+    - responseText: voy a pagar
+      nextNodeId: 6
+      endsConversation: 0
+    - responseText: vas a pagar
+      nextNodeId: 6
+      endsConversation: 0
+    - responseText: va a pagar
+      nextNodeId: 7
+      endsConversation: 0
+    - responseText: vamos a pagar
+      nextNodeId: 6
+      endsConversation: 0
+    - responseText: van a pagar
+      nextNodeId: 6
+      endsConversation: 0
+  - nodeId: 7
+    spanishLine: 'Yo ____ (ir + a + pagar) la cuenta. '
+    englishHint: 'Same thing but this time you are responding by saying that you
+      are going to pay. Ir + a + pagar - Yo(I) - voy a pagar, Tu(You) - vas a pagar,
+      El/Ella/Usted(He/She/You(Formal) - va a pagar, Nosotros(We) - vamos a pagar,
+      Ellos/Ellas/Ustedes(They/Them/You All) - van a pagar. '
+    options:
+    - responseText: voy a pagar
+      nextNodeId: 8
+      endsConversation: 0
+    - responseText: vas a pagar
+      nextNodeId: 7
+      endsConversation: 0
+    - responseText: va a pagar
+      nextNodeId: 7
+      endsConversation: 0
+    - responseText: vamos a pagar
+      nextNodeId: 7
+      endsConversation: 0
+    - responseText: van a pagar
+      nextNodeId: 7
+      endsConversation: 0
+  - nodeId: 8
+    spanishLine: Buen Trabajo! (Good Job!)
+    englishHint: 
+    options:
+    - responseText: Terminado
+      nextNodeId: 0
+      endsConversation: 1
+  startNodeId: 0
