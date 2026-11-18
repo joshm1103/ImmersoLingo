@@ -1,0 +1,205 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d90b47436c6c120429fdc387a5b457df, type: 3}
+  m_Name: MarketScenario
+  m_EditorClassIdentifier: Assembly-CSharp::NPCDialogueData
+  npcName: Cashier
+  nodes:
+  - nodeId: 0
+    spanishLine: Nosotros ________ ________ (ir + a + tomar) un carrito de compras
+      grande.
+    englishHint: 'Future tense grammar once again. Ir a tomar: Yo(I) - Voy a tomar,
+      Tu(You) - vas a tomar, El/Ella/Usted(He/She/You(Formal)) - Va a tomar, Nosotros(We)
+      - Vamos a tomar, Ellos/Ellas/Ustedes(They/Them/You All) - Van a tomar. '
+    options:
+    - responseText: Voy a tomar
+      nextNodeId: 1
+      endsConversation: 0
+    - responseText: vas a tomar
+      nextNodeId: 0
+      endsConversation: 0
+    - responseText: va a tomar
+      nextNodeId: 0
+      endsConversation: 0
+    - responseText: vamos a tomar
+      nextNodeId: 0
+      endsConversation: 0
+    - responseText: van a tomar
+      nextNodeId: 0
+      endsConversation: 0
+  - nodeId: 1
+    spanishLine: 'Yo _____ (agarrar) la leche fresca (preterito)  '
+    englishHint: 'This is past tense grammar. Agarrar: Yo(I) - Agarre, Tu(You) -
+      Aggaraste, El/Ella/Usted (He/She/You All) - Agarro, Nosotros(We) - Agarramos,
+      Ellos/Ellas/Ustedes (They/Them/You All) - Agarraron. '
+    options:
+    - responseText: agarre
+      nextNodeId: 2
+      endsConversation: 0
+    - responseText: agarraste
+      nextNodeId: 1
+      endsConversation: 0
+    - responseText: agarro
+      nextNodeId: 1
+      endsConversation: 0
+    - responseText: agarramos
+      nextNodeId: 1
+      endsConversation: 0
+    - responseText: agarraron
+      nextNodeId: 1
+      endsConversation: 0
+  - nodeId: 2
+    spanishLine: Las manzanas ________ (ser/estar) rojas y deliciosas
+    englishHint: 'The sentence is describing the physical attributes of the apple
+      saying its red and delicious. Is this permanent or temporary. (Think carefully
+      physical attributes in general will they change?) '
+    options:
+    - responseText: Ser
+      nextNodeId: 3
+      endsConversation: 0
+    - responseText: Estar
+      nextNodeId: 2
+      endsConversation: 0
+  - nodeId: 3
+    spanishLine: Las manzanas ________ (ser) rojas y deliciosas
+    englishHint: You are not the apples, nor are you talking to the apples, and there
+      are multiple apples so what is the right conjugation? Ser - Yo(I) - soy, Tu(You)
+      - eres, El/Ella/Usted(He/She/You(Formal)) - es, Nosotros(We) - Somos, Ellos/Ellas/Ustedes(They/Them/You
+      All) - Son
+    options:
+    - responseText: soy
+      nextNodeId: 3
+      endsConversation: 0
+    - responseText: eres
+      nextNodeId: 3
+      endsConversation: 0
+    - responseText: es
+      nextNodeId: 3
+      endsConversation: 0
+    - responseText: somos
+      nextNodeId: 3
+      endsConversation: 0
+    - responseText: son
+      nextNodeId: 4
+      endsConversation: 0
+  - nodeId: 4
+    spanishLine: "\xBFLas verduras ________ (ser/estar) org\xE1nicas o naturales?"
+    englishHint: Again we are talking about a physical attribute of the vegetables.
+      So which verb is it?
+    options:
+    - responseText: Ser
+      nextNodeId: 5
+      endsConversation: 0
+    - responseText: Estar
+      nextNodeId: 4
+      endsConversation: 0
+  - nodeId: 5
+    spanishLine: "\xBFLas verduras ________ (ser) org\xE1nicas o naturales?"
+    englishHint: 'Just like the last one you''re not the vegetables, you''re not
+      talking to the vegetables, and there''s multiple vegetables. You are not the
+      apples, nor are you talking to the apples, and there are multiple apples so
+      what is the right conjugation? Ser - Yo(I) - soy, Tu(You) - eres, El/Ella/Usted(He/She/You(Formal))
+      - es, Nosotros(We) - Somos, Ellos/Ellas/Ustedes(They/Them/You All) - Son '
+    options:
+    - responseText: soy
+      nextNodeId: 5
+      endsConversation: 0
+    - responseText: eres
+      nextNodeId: 5
+      endsConversation: 0
+    - responseText: es
+      nextNodeId: 5
+      endsConversation: 0
+    - responseText: somos
+      nextNodeId: 5
+      endsConversation: 0
+    - responseText: son
+      nextNodeId: 6
+      endsConversation: 0
+  - nodeId: 6
+    spanishLine: "La l\xEDnea de la caja est\xE1 muy larga. Yo ________ (tener) prisa
+      y ________ (preferir) usar la caja autom\xE1tica"
+    englishHint: 'In this sentence you are talking about what YOU ARE DOING. Tener:
+      Yo(I) - Tengo, Tu(You) - Tienes, El/Ella/Usted (He/She/You(formal)) - Tiene,
+      Nosotros (We) - Tenemos, Ellos/Ellas/Ustedes (They/Them/You All) - Tienen.
+      Tener - Yo(I) - Tengo, Tu(You) - Tienes, El/Ella/Usted(He/She/You(Formal))
+      - Tiene, Nosotros(We) - Tenemos, Ellos/Ellas/Ustedes(They/Them/You All) - Tienen.
+      Preferir - Yo(I) - Prefiero, Tu(You) - Prefieres, El/Ella/Usted(He/She/You(Formal))
+      - Prefiere, Nosotros(We) - Preferimos, Ellos/Ellas/Ustedes(They/Them/You All)
+      - Prefieren.   '
+    options:
+    - responseText: Tengo, Prefiero
+      nextNodeId: 7
+      endsConversation: 0
+    - responseText: Tienes, Prefieres
+      nextNodeId: 6
+      endsConversation: 0
+    - responseText: Tiene, Prefiere
+      nextNodeId: 6
+      endsConversation: 0
+    - responseText: Tenemos, Preferimos
+      nextNodeId: 6
+      endsConversation: 0
+    - responseText: Tienen, Prefieren
+      nextNodeId: 6
+      endsConversation: 0
+  - nodeId: 7
+    spanishLine: "\xBFQui\xE9n ________ (pagar) las frutas y la leche?"
+    englishHint: 'Basic present tense grammar. Pagar is an -ar verb. In this scenario
+      its asking which 3RD PERSON is paying. Pagar: Yo(I) - Pago, Tu(You) - Pagas,
+      El/Ella/Usted(He/She/You(Formal)) - Paga, Nosotros(We) - Pagamos, Ellos/Ellas/Ustedes(They/Them/You
+      All) - Pagan.  '
+    options:
+    - responseText: pago
+      nextNodeId: 7
+      endsConversation: 0
+    - responseText: pagas
+      nextNodeId: 7
+      endsConversation: 0
+    - responseText: paga
+      nextNodeId: 8
+      endsConversation: 0
+    - responseText: pagamos
+      nextNodeId: 7
+      endsConversation: 0
+    - responseText: pagan
+      nextNodeId: 7
+      endsConversation: 0
+  - nodeId: 8
+    spanishLine: Yo ________ (pagar) en efectivo.
+    englishHint: 'Now you are saying that you will pay so what is correct? Pagar:
+      Yo(I) - Pago, Tu(You) - Pagas, El/Ella/Usted(He/She/You(Formal)) - Paga, Nosotros(We)
+      - Pagamos, Ellos/Ellas/Ustedes(They/Them/You All) - Pagan.  '
+    options:
+    - responseText: pago
+      nextNodeId: 9
+      endsConversation: 0
+    - responseText: pagas
+      nextNodeId: 8
+      endsConversation: 0
+    - responseText: paga
+      nextNodeId: 8
+      endsConversation: 0
+    - responseText: pagamos
+      nextNodeId: 8
+      endsConversation: 0
+    - responseText: pagan
+      nextNodeId: 8
+      endsConversation: 0
+  - nodeId: 9
+    spanishLine: Buen Trabajo! (Good Job!)
+    englishHint: 
+    options:
+    - responseText: Terminado
+      nextNodeId: 0
+      endsConversation: 1
+  startNodeId: 0

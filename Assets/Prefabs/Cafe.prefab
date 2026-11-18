@@ -1270,6 +1270,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: NPC_Barista Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 3273452935120399942, guid: bc3cd3e9a8f63114cb76c85f2da7fc52, type: 3}
+      propertyPath: dialogueData
+      value: 
+      objectReference: {fileID: 11400000, guid: ef75ac9e90e955641acd48abd05b6a1e, type: 2}
     - target: {fileID: 7404461276323284080, guid: bc3cd3e9a8f63114cb76c85f2da7fc52, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.7692308
