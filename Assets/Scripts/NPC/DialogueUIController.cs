@@ -9,6 +9,7 @@ public class DialogueUIController : MonoBehaviour
 {
     public TMP_Text dialogueText;          // shows NPC's line
     public TMP_Text hintText;              // shows englishHint
+    public TMP_Text feedbackText;          // "Inténtalo de nuevo" message
     public Transform buttonContainer;      // parent object that holds response buttons
     public Button buttonPrefab;            // a simple button prefab to spawn per option
 
@@ -21,6 +22,7 @@ public class DialogueUIController : MonoBehaviour
     private readonly List<GameObject> spawnedButtons = new List<GameObject>();
     private bool currentNodeHasHint;
     private bool initialized;
+    private bool showingWrongFeedback;
 
     private void Awake()
     {
@@ -51,6 +53,8 @@ public class DialogueUIController : MonoBehaviour
     public void DisplayNode(DialogueNode node)
     {
         Initialize();
+
+        showingWrongFeedback = false;
 
         if (node == null)
         {
@@ -100,6 +104,7 @@ public class DialogueUIController : MonoBehaviour
 
         if (hintButton != null) hintButton.gameObject.SetActive(!showHint && currentNodeHasHint);
         if (backButton != null) backButton.gameObject.SetActive(showHint);
+        if (feedbackText != null) feedbackText.gameObject.SetActive(!showHint && showingWrongFeedback);
     }
 
     // removes last conversation's buttons before showing new set
@@ -111,5 +116,14 @@ public class DialogueUIController : MonoBehaviour
         }
 
         spawnedButtons.Clear();
+    }
+    // wrong answer: show the message and grey out that button so they try another
+    public void ShowWrongAnswer(int optionIndex)
+    {
+        showingWrongFeedback = true;
+        SetShowingHint(false);   // make sure we're on the question view
+
+        if (optionIndex >= 0 && optionIndex < spawnedButtons.Count && spawnedButtons[optionIndex] != null)
+            spawnedButtons[optionIndex].GetComponent<Button>().interactable = false;
     }
 }
