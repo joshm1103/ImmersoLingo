@@ -91,6 +91,12 @@ public class NPCController : MonoBehaviour
     {
         DialogueOption chosen = currentNode.options[optionIndex];
 
+        if (DialogueRules.IsWrongAnswer(currentNode.nodeId, chosen.nextNodeId, chosen.endsConversation))
+        {
+            dialogueUI.ShowWrongAnswer(optionIndex);
+            return;   // stay on this line
+        }
+
         if (chosen.endsConversation)
         {
             EndDialogue();

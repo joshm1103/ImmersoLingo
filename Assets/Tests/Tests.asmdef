@@ -5,7 +5,8 @@
         "UnityEngine.TestRunner",
         "UnityEditor.TestRunner",
         "ImmersoLingo.Speech",
-        "ImmersoLingo.Menu"
+        "ImmersoLingo.Menu",
+        "ImmersoLingo.Dialogue"
     ],
     "includePlatforms": [
         "Editor"
