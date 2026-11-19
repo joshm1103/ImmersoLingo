@@ -26870,6 +26870,10 @@ PrefabInstance:
       propertyPath: feedbackText
       value: 
       objectReference: {fileID: 1477243296}
+    - target: {fileID: 5519561687046123243, guid: 92de6d0fba9099e4fb0d50a0ff0d6994, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -627
+      objectReference: {fileID: 0}
     - target: {fileID: 5805957720384344404, guid: 92de6d0fba9099e4fb0d50a0ff0d6994, type: 3}
       propertyPath: m_StaticShadowCaster
       value: 0
